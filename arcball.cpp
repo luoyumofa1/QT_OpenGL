@@ -134,7 +134,7 @@ void    ArcBall_t::drag(const Point2fT* NewPt, Quat4fT* NewRot)
             NewRot->s.Y = Perp.s.Y;
             NewRot->s.Z = Perp.s.Z;
             //在四元数中,w=cos(a/2)，a为旋转的角度
-            NewRot->s.W= Vector3fDot(&this->StVec, &this->EnVec);
+            NewRot->s.W= Vector3fAng(&this->StVec, &this->EnVec);
         }
         //是0，说明没有旋转
         else

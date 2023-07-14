@@ -181,18 +181,18 @@ void myopengl::mouseMoveEvent(QMouseEvent *event)
         ArcBall->MousePt.s.Y = event->pos().y();
         ArcBall->upstate();
 
-        //使用四元数旋转
-        QMatrix4x4 mat(ArcBall->Transform.s.M00,ArcBall->Transform.s.M01,ArcBall->Transform.s.M02,ArcBall->Transform.s.M03,ArcBall->Transform.s.M10,ArcBall->Transform.s.M11,ArcBall->Transform.s.M12,ArcBall->Transform.s.M13,ArcBall->Transform.s.M20,ArcBall->Transform.s.M21,ArcBall->Transform.s.M22,ArcBall->Transform.s.M23,ArcBall->Transform.s.M30,ArcBall->Transform.s.M31,ArcBall->Transform.s.M32,ArcBall->Transform.s.M33);
-        mRotate=mat;
+        //使用4*4矩阵旋转
+//        QMatrix4x4 mat(ArcBall->Transform.s.M00,ArcBall->Transform.s.M01,ArcBall->Transform.s.M02,ArcBall->Transform.s.M03,ArcBall->Transform.s.M10,ArcBall->Transform.s.M11,ArcBall->Transform.s.M12,ArcBall->Transform.s.M13,ArcBall->Transform.s.M20,ArcBall->Transform.s.M21,ArcBall->Transform.s.M22,ArcBall->Transform.s.M23,ArcBall->Transform.s.M30,ArcBall->Transform.s.M31,ArcBall->Transform.s.M32,ArcBall->Transform.s.M33);
+//        mRotate=mat;
 
 
 
-        // 旋转轴和旋转角度旋转 记得去arcball.cpp改变函数Vector3fAng名称
+//        // 四元数旋转 记得去arcball.cpp改变函数Vector3fAng名称
 //        float xx=ArcBall->Quat.s.X;
 //        float yy=ArcBall->Quat.s.Y;
 //        float zz=ArcBall->Quat.s.Z;
 //        float ww=ArcBall->Quat.s.W;//返回值为弧度
-//        QQuaternion m(xx,yy,zz,ww);
+//        //QQuaternion m(xx,yy,zz,ww);
 //        mRotate.rotate(ww,xx,yy,zz);
 //        mRotate.rotate(cos(ww/2),sin(ww/2)*xx,sin(ww/2)*yy,sin(ww/2)*zz);
 
